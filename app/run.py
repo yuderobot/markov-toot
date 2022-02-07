@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 
-import tweepy
+from mastodon import Mastodon
 import subprocess
 import json
 import os
@@ -10,15 +10,12 @@ from dotenv import load_dotenv
 # Import keys from .env
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
-CK = os.environ.get("CK")
-CS = os.environ.get("CS")
-AT = os.environ.get("AT")
-AS = os.environ.get("AS")
 
-# Generate Twitter objects
-auth = tweepy.OAuthHandler(CK, CS)
-auth.set_access_token(AT, AS)
-api = tweepy.API(auth)
+# Generate Mastodon API instance
+mastodon = Mastodon(
+    access_token = os.environ.get("TOKEN"),
+    api_base_url = os.environ.get("DOMAIN")
+)
 
 # Run generator
 def res_cmd(cmd):
@@ -47,8 +44,8 @@ def main():
   # Remove risky words from result
   result = remover(result)
 
-  # Call Twitter API to tweet
-  api.update_status(result)
+  # Call Mastodon.py to toot
+  mastodon.toot(result)
 
 if __name__ == '__main__':
   main()
