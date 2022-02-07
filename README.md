@@ -63,8 +63,5 @@ This definition make this bot run every 20 minutes. (`*:00`, `*:20`, `*:40`)
 ## References
 - https://github.com/o-tomox/TextGenerator
 
-## Example
-- [@yuderobot@mstdn.yude.jp](https://mstdn.yude.jp/@yuderobot)
-
 ## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
