@@ -6,7 +6,7 @@ Automatically generate and tweet sentences like your daily tweets by using marko
 - pandas
 - MeCab
 - mecab-python3
-- tweepy
+- Mastodon.py
 
 ## Setup
 ### Docker (Docker Compose)
@@ -64,7 +64,7 @@ This definition make this bot run every 20 minutes. (`*:00`, `*:20`, `*:40`)
 - https://github.com/o-tomox/TextGenerator
 
 ## Example
-- [@yuderobot](https://twitter.com/yuderobot)
+- [@yuderobot@mstdn.yude.jp](https://mstdn.yude.jp/@yuderobot)
 
 ## License
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
