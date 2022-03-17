@@ -3,7 +3,8 @@ services:
     markov-toot:
         restart: always
         container_name: markov-toot
-        image: yude/markov-toot:latest
+        image: ghcr.io/yuderobot/markov-toot:master
+        build: .
         volumes:
           - "./data:/app/data"
         environment:
